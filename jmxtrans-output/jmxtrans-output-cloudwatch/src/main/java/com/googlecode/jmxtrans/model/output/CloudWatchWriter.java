@@ -146,6 +146,7 @@ public class CloudWatchWriter implements OutputWriterFactory {
 			}
 
 			metricDataRequest.setMetricData(metricDatumList);
+			log.debug("metricDataRequest -> "+metricDataRequest.toString());
 			cloudWatchClient.putMetricData(metricDataRequest);
 		}
 
